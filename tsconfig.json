@@ -3,7 +3,20 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "target": "es2018",
-    "lib": ["esnext","DOM"],
+    "lib": [
+      "esnext",
+      "DOM"
+    ],
     "jsx": "preserve",
-  }
+  },
+  "include": [
+    "vite-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist"
+  ]
 }
