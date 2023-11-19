@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[slek-root] {
+  margin: 0 auto;
+  user-select: none;
+}

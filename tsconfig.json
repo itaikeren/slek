@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "target": "es2018",
+    "lib": ["esnext","DOM"],
+    "jsx": "preserve",
+  }
+}

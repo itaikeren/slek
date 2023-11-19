@@ -1,0 +1,89 @@
+.cron [slek-root] {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(180deg, #383838 0%, #2e2e2e 100%);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.10);
+}
+
+.cron [slek-header] {
+  margin-bottom: 1rem;
+}
+
+.cron [slek-headline] {
+  color: #e5e5e5;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.cron [slek-next-button] {
+  padding: 0.2rem;
+  cursor: pointer;
+  color: #999999;
+}
+
+.cron [slek-next-button]:hover {
+  color: #e5e5e5;
+  background-color: #404040;
+  border-radius: 0.25rem;
+}
+
+.cron [slek-prev-button] {
+  padding: 0.2rem;
+  cursor: pointer;
+  color: #999999;
+}
+
+.cron [slek-prev-button]:hover {
+  color: #e5e5e5;
+  background-color: #404040;
+  border-radius: 0.25rem;
+}
+
+.cron [slek-grid] {
+  grid-gap: 0.5rem;
+
+}
+
+.cron [slek-weekdays] {
+  padding-bottom: 0.5rem;
+  font-size: small;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  color: #999999;
+  text-align: center;
+}
+
+.cron [slek-cell] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  color: #e5e5e5;
+}
+
+.cron [slek-cell]:hover {
+  background-color: #404040;
+}
+
+.cron [slek-cell][data-type="date"] {
+  padding: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.cron [slek-cell][data-type="date"][data-outside-date=true] {
+  color: #606060;
+}
+
+.cron [slek-cell][data-type="date"][data-today=true] {
+  font-weight: 500;
+  background-color: #ff5715;
+  color: white;
+}
+
+.cron [slek-cell][data-type="date"][data-selected=true] {
+  color: white;
+  background-color: #ff5715;
+}

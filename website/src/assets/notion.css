@@ -1,0 +1,88 @@
+.notion [slek-root] {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.10);
+  outline: 1px solid rgba(156, 163, 175, 0.1);
+}
+
+.notion [slek-header] {
+  margin-bottom: 1rem;
+}
+
+.notion [slek-headline] {
+  color: black;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.notion [slek-next-button] {
+  padding: 0.2rem;
+  cursor: pointer;
+  color: black;
+}
+
+.notion [slek-next-button]:hover {
+  background-color: #f7f7f7;
+  border-radius: 0.25rem;
+}
+
+.notion [slek-prev-button] {
+  padding: 0.2rem;
+  cursor: pointer;
+  color: black;
+}
+
+.notion [slek-prev-button]:hover {
+  background-color: #f7f7f7;
+  border-radius: 0.25rem;
+}
+
+.notion [slek-grid] {
+  grid-gap: 0.5rem;
+}
+
+.notion [slek-weekdays] {
+  padding-bottom: 0.5rem;
+  font-size: small;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  color: #999999;
+  text-align: center;
+}
+
+.notion [slek-cell] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  color: black;
+}
+
+.notion [slek-cell]:hover {
+  background-color: #e1ecfb;
+  outline: 2px solid #2483e2;
+}
+
+.notion [slek-cell][data-type="date"] {
+  padding: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.notion [slek-cell][data-type="date"][data-outside-date=true] {
+  color: #9c9c9c;
+}
+
+.notion [slek-cell][data-type="date"][data-today=true] {
+  font-weight: 500;
+  background-color: #2483e2;
+  color: white;
+}
+
+.notion [slek-cell][data-type="date"][data-selected=true] {
+  background-color: #2483e2;
+  color: white;
+}

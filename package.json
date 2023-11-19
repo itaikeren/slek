@@ -1,0 +1,20 @@
+{
+  "name": "slek-root",
+  "private": true,
+  "scripts": {
+    "build": "pnpm -F slek build",
+    "dev": "pnpm -F slek dev",
+    "dev:test": "pnpm -F test dev",
+    "dev:website": "pnpm -F website dev",
+    "publish": "pnpm -F slek publish"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "eslint": "^8.53.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tsup": "^7.3.0",
+    "typescript": "^5.2.2"
+  }
+}
