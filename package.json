@@ -6,7 +6,7 @@
     "dev": "pnpm -F slek dev",
     "dev:test": "pnpm -F test dev",
     "dev:website": "pnpm -F website dev",
-    "publish": "pnpm -F slek publish"
+    "publish": "cd slek && npm publish"
   },
   "devDependencies": {
     "@types/react": "^18.2.37",

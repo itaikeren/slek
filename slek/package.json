@@ -1,6 +1,6 @@
 {
   "name": "slek",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Calendar component for React.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -11,7 +11,8 @@
   "scripts": {
     "build": "tsup src/index.tsx",
     "dev": "tsup src/index.tsx --watch",
-    "publish": "npm run build && npm publish"
+    "prepublishOnly": "cp ../README.md . && pnpm build",
+    "postpublish": "rm README.md"
   },
   "keywords": [
     "react",
