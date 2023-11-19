@@ -119,7 +119,7 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
       slek:
-        specifier: latest
+        specifier: workspace:*
         version: link:../slek
     devDependencies:
       '@tailwindcss/typography':
