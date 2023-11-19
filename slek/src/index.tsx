@@ -58,7 +58,7 @@ export function useCalendar(initialDate?: dayjs.Dayjs | Date | Array<dayjs.Dayjs
 }
 
 export type CalendarProps = Omit<React.HTMLAttributes<HTMLDivElement>, "onChange"> & {
-  date?: DateType;
+  date?: dayjs.Dayjs | Date | Array<dayjs.Dayjs | Date | undefined>;
   minDate?: dayjs.Dayjs | Date;
   maxDate?: dayjs.Dayjs | Date;
   weekStart?: 0 | 1 | 2 | 3 | 4 | 5 | 6;
@@ -482,6 +482,7 @@ function Grid(props: GridProps) {
                 invalid={(minDate && dateValue(i).isBefore(minDate)) || (maxDate && dateValue(i).isAfter(maxDate))}
                 today={dateValue(i).isSame(dayjs(), "day")}
                 between={
+                  mode === "range" &&
                   Array.isArray(selected) &&
                   selected[0] &&
                   selected[1] &&
@@ -519,6 +520,7 @@ function Grid(props: GridProps) {
               invalid={(minDate && dateValue(i).isBefore(minDate)) || (maxDate && dateValue(i).isAfter(maxDate))}
               today={dateValue(i).isSame(dayjs(), "day")}
               between={
+                mode === "range" &&
                 Array.isArray(selected) &&
                 selected[0] &&
                 selected[1] &&
@@ -560,6 +562,7 @@ function Grid(props: GridProps) {
                 invalid={(minDate && dateValue(i).isBefore(minDate)) || (maxDate && dateValue(i).isAfter(maxDate))}
                 today={dateValue(i).isSame(dayjs(), "day")}
                 between={
+                  mode === "range" &&
                   Array.isArray(selected) &&
                   selected[0] &&
                   selected[1] &&
