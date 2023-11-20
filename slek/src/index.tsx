@@ -52,9 +52,9 @@ export function useCalendar(initialDate?: dayjs.Dayjs | Date | Array<dayjs.Dayjs
   const [date, setDate] = React.useState(formatDate(initialDate, true));
 
   const selectToday = () => setDate(dayjs().toDate());
-  const selectCustomDate = (date: Date) => setDate(date);
+  const selectCustom = (date: Date) => setDate(date);
 
-  return { date, setDate, selectToday, selectCustomDate };
+  return { date, setDate, selectToday, selectCustom };
 }
 
 export type CalendarProps = Omit<React.HTMLAttributes<HTMLDivElement>, "onChange"> & {

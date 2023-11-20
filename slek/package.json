@@ -11,7 +11,8 @@
   "scripts": {
     "build": "tsup src/index.tsx",
     "dev": "tsup src/index.tsx --watch",
-    "prepublishOnly": "cp ../README.md . && pnpm build",
+    "changelog": "changelogen --release --no-commit --no-tag",
+    "prepublishOnly": "cp ../README.md . && pnpm build && pnpm changelog",
     "postpublish": "rm README.md"
   },
   "keywords": [

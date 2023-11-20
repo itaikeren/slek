@@ -101,7 +101,7 @@ Under the hood, we are using `dayjs` to do all the magic, so if you want to chan
 | Prop | Type | Default | Description |
 | --- | --- | --- | --- |
 | `mode` | "single" \| "range" \| "multiple" | `"single"` | The selection mode of the calendar |
-| `direction` | "ltr" / "rtl" | `"ltr"` | The direction of the calendar |
+| `direction` | "ltr" \| "rtl" | `"ltr"` | The direction of the calendar |
 | `weekdayStyle` | "full" \| "short" \| "min" | `"min"` | The style of the weekday names |
 | `monthStyle` | "full" \| "short" | `"short"` | The style of the month name |
 | `showOutsideDates` | boolean | `true` | Whether to show dates from the previous and next months |
@@ -133,6 +133,28 @@ The children of the Grid component is a render prop that receives the following 
 | `data-selected` | "true" \| "false" |
 | `data-between` | "true" \| "false" |
 | `data-type` | "date" \| "month" \| "year" |
+
+## Utils
+
+### useCalendar
+
+A simple hook that returns the current date and a function to set the date. You can use it to control the date from outside the calendar. The hook accepts an optional initial date.
+The hook returns an object with the following properties:
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `date` | Date \| Date[] | The current date |
+| `setDate` | (date: Date \| Date[]) => void | A function to set the date |
+| `selectToday` | () => void | A function to select today |
+| `selectCustom` | (date: Date) => void | A function to select a custom date |
+
+```javascript
+const { date, setDate } = useCalendar();
+
+<Calendar date={date} onChange={(d) => setDate(d)}>
+...
+</Calendar>
+```
 
 ## Contributing
 If you want to contribute to the development, please follow these steps:
